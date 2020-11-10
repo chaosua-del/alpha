@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- leadlet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Alpha</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-light">
+      <div class="container d-flex justify-content-between align-items-center ">
+        <a href="index.html" class="header__logo navbar-brand"><img src="img/header/header-logo.svg"
+            alt="Альфа Трейдинг"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex-lg justify-content-between align-items-center pt-lg-3 pt-xl-0"
+          id="navbarTogglerDemo02">
+          <form class="form-inline my-2 my-xl-0">
+            <div class="searchbar d-flex flex-wrap">
+              <input type="text" class="searchbar__input" placeholder="Поиск">
+              <button type="submit" class="searchbar__button">
+                <img src="img/header/search-icon.svg" alt="Поиск">
+              </button>
+            </div>
+          </form>
+          <ul class="navbar-nav mt-2 mt-xl-0">
+            <li class="header__block d-flex flex-wrap pt-2 mr-3">
+              <div class="bucket-icon"><img src="img/header/buy-icon.svg" alt="Корзина"></div>
+              <div class="ml-3">
+                <p class="header__text mb-0">Корзина</p>
+                <p class="header__price">18 000руб</p>
+              </div>
+            </li>
+
+            <li class="header__block d-flex pt-2">
+              <div class="phone-icon"><img src="img/header/phone-icon.svg" alt="Корзина"></div>
+              <div class="ml-3 text-right">
+                <a href="tel:88005508106" class="header__phone d-block">8 (800) 550-81-06</a>
+                <p class="header__text">Звонок бесплатный</p>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- ./nav -->
+
+    <div class="filter">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col p-sm-0 d-flex justify-content-start justify-content-xl-between align-items-center flex-wrap">
+            <div class="position-relative filter__item">
+              <button class="btn button--primary header__burger" type="button" data-toggle="collapse"
+                data-target="#header-burger" aria-expanded="false" aria-controls="header-burger">
+                Каталог продукции
+              </button>
+              <div class="collapse position-absolute" id="header-burger">
+                <div class="card card-body filter__expand">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                  anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown d-flex align-items-start filter__item">
+              <img src="img/header/prodction-icon.svg" alt="prod">
+              <button class="dropdown-toggle" type="button" id="production" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Производство
+              </button>
+              <div class="dropdown-menu" aria-labelledby="production">
+                <button class="dropdown-item" type="button">Action</button>
+                <button class="dropdown-item" type="button">Another action</button>
+                <button class="dropdown-item" type="button">Something else here</button>
+              </div>
+            </div>
+
+            <div class="dropdown d-flex align-items-start filter__item">
+              <img src="img/header/services-icon.svg" alt="services">
+              <button class="dropdown-toggle" type="button" id="services" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Услуги
+              </button>
+              <div class="dropdown-menu" aria-labelledby="services">
+                <button class="dropdown-item" type="button">Action</button>
+                <button class="dropdown-item" type="button">Another action</button>
+                <button class="dropdown-item" type="button">Something else here</button>
+              </div>
+            </div>
+
+            <a href="#" class="d-flex align-items-start filter__item">
+              <img class="mr-2" src="img/header/discounts-icon.svg" alt="discounts">
+              <p class="mb-0">Скидки</p>
+            </a>
+
+            <a href="#" class="filter__item">
+              Контакты
+            </a>
+
+            <div class="dropdown d-flex align-items-start filter__item">
+              <button class="dropdown-toggle" type="button" id="production" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                О компании
+              </button>
+              <div class="dropdown-menu" aria-labelledby="production">
+                <button class="dropdown-item" type="button">Action</button>
+                <button class="dropdown-item" type="button">Another action</button>
+                <button class="dropdown-item" type="button">Something else here</button>
+              </div>
+            </div>
+
+            <a href="#" class="filter__item">
+              Доставка
+            </a>
+
+            <a href="#" class="filter__item">
+              Кредит
+            </a>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.filter -->
+  </header>
+
+  <section class="hero">
+    <div class="container-fluid container-lg p-0 mt-2">
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-touch="true" data-ride="carousel"
+        data-interval="5000">
+        <ol class="carousel-indicators justify-content-end align-items-center mr-4">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/main-hero-slide1.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-block text-left">
+              <h5 class="hero__header">Производство изделий
+                из металла</h5>
+              <a href="#" class="hero__link">С доставкой по РФ и ближнему зарубежью</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/main-hero-slide2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-block text-left">
+              <h5 class="hero__header">Производство изделий
+                из металла</h5>
+              <a href="#" class="hero__link">С доставкой по РФ и ближнему зарубежью</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/main-hero-slide1.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-block text-left">
+              <h5 class="hero__header">Производство изделий
+                из металла</h5>
+              <a href="#" class="hero__link">С доставкой по РФ и ближнему зарубежью</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.hero -->
+
+  <section class="categories">
+    <div class="container p-sm-0 position-relative my-4">
+      <h2 class="title my-4">Категории</h2>
+      <div class="swiper-container categories__swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="categories__card">
+              <h3 class="categories__card-title">Тумбочки
+                и тележки</h3>
+              <div class="categories__card-img">
+                <img src="img/categories/boxes.png" alt="photo">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="categories__card">
+              <h3 class="categories__card-title">Тумбочки
+                и тележки</h3>
+              <div class="categories__card-img">
+                <img src="img/categories/wardrobes.png" alt="photo">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="categories__card">
+              <h3 class="categories__card-title">Тумбочки
+                и тележки</h3>
+              <div class="categories__card-img">
+                <img src="img/categories/boxes.png" alt="photo">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="categories__card">
+              <h3 class="categories__card-title">Тумбочки
+                и тележки</h3>
+              <div class="categories__card-img">
+                <img src="img/categories/tables.png" alt="photo">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="categories__card">
+              <h3 class="categories__card-title">Тумбочки
+                и тележки</h3>
+              <div class="categories__card-img">
+                <img src="img/categories/containers.png" alt="photo">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="categories__card">
+              <h3 class="categories__card-title">Тумбочки
+                и тележки</h3>
+              <div class="categories__card-img">
+                <img src="img/categories/boxes.png" alt="photo">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="categories__card">
+              <h3 class="categories__card-title">Тумбочки
+                и тележки</h3>
+              <div class="categories__card-img">
+                <img src="img/categories/boxes.png" alt="photo">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="categories__card">
+              <h3 class="categories__card-title">Тумбочки
+                и тележки</h3>
+              <div class="categories__card-img">
+                <img src="img/categories/boxes.png" alt="photo">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev categories__swiper-button-prev"></div>
+      <div class="swiper-button-next categories__swiper-button-next"></div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.categories -->
+
+  <section class="benefits">
+    <div class="container my-4 p-sm-0">
+      <div class="row">
+        <div class="col-12 title">10 лет работаем на рынке изделий из металла</div>
+        <div class="col-12 col-lg-6 d-flex flex-wrap pl-lg-0 justify-content-center justify-content-lg-start">
+          <div class="benefits__card">
+            <div class="benefits__card-image">
+              <img src="img/benefits/delivery-icon.svg" alt="delivery">
+            </div>
+            <h3 class="benefits__card-title">Поставки по РФ и в СНГ</h3>
+            <p class="benefits__card-description">Доставим товар удобным
+              для вас способом.</p>
+          </div>
+
+          <div class="benefits__card">
+            <div class="benefits__card-image">
+              <img src="img/benefits/guaranty-icon.svg" class="benefits__card-icon" alt="guaranty">
+            </div>
+            <h3 class="benefits__card-title">Гарантия</h3>
+            <p class="benefits__card-description">Качественное гарантийное
+              обслуживание.</p>
+          </div>
+
+          <div class="benefits__card">
+            <div class="benefits__card-image">
+              <img src="img/benefits/discounts-icon.svg" class="benefits__card-icon" alt="discounts">
+            </div>
+            <h3 class="benefits__card-title">Cкидки</h3>
+            <p class="benefits__card-description">Для оптовых покупателей
+              действуют специальные цены!</p>
+          </div>
+
+          <div class="benefits__card">
+            <div class="benefits__card-image">
+              <img src="img/benefits/payment-icon.svg" class="benefits__card-icon" alt="payment">
+            </div>
+            <h3 class="benefits__card-title">Оплата</h3>
+            <p class="benefits__card-description">Оплата любыми способами
+              для вашего удобства.</p>
+          </div>
+
+          <div class="benefits__certificate">
+            <img src="img/benefits/pdf-icon.svg" alt="pdf">
+            <div>
+              <a href="#" class="benefits__certificate-link">Cертификат на продукцию.pdf</a>
+              <p class="benefits__certificate-description">Сертификат соответствия на продукцию (отправим полную версию
+                по Вашей заявке)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 benefits__description pr-lg-0">
+          <p class="mb-0 benefits__description-text">
+            Компания «Альфа-Трейдинг» занимается изготовлением изделий из металла в Новокузнецке. Мы предлагаем самый
+            широкий ассортимент сварных и кованых металлоизделий.
+
+
+            Наши высококвалифицированные мастера выполняют сложные работы по эскизам и чертежам, как по индивидуальным
+            проектам
+            клиентов, так и наших собственных дизайнеров. Успешно сотрудничаем со строительными организациями при
+            строительстве микрорайонов города Новокузнецк. В производстве металлоизделий мыиспользуем оборудование
+            компании ЭСАБ, всемирно известного изготовителя
+            оборудования и материалов для резки и сварки, оборудование для
+            шлифовальных и
+            долбежных работ, гибочное оборудование.
+
+            В нашем распоряжении цеха фрезерной и токарной обработки,
+            электродуговой сварки металлов, алюминия, стали, сборочный цех,без
+            которых не обходится изготовление изделий из металла.
+            Мы предлагаем современное оборудование и изделия из металла...
+          </p>
+          <div class="collapse" id="benefits-collapse">
+            <div class="benefits__description-text">
+              нас в продаже оборудование для производства представлено в широком ассортименте: Мебель из нержавеющей
+              стали, Бункеры для ТБО, Изделия для ЖКХ и т.д. И это далеко не полный перечень
+              производственного оборудования, которое можно купить в нашей компании. Вы можете купить готовую продукцию
+              из нашего каталога, либо...
+              . заказать изготовление металлоизделия по каталогу «Производство».
+              В нашем ассортименте представлено огромное количество моделей оборудования для решения самых разных
+              производственных и бытовых задач. Благодаря
+              инновационным устройствам и инструментам Вы сможете почерпнуть новые бизнес-идеи, усовершенствовать
+              технологии производства и повысить......
+              эффективность ..юпредприятия.На сайте представлены фото и подробные описания каждого устройства. Самые
+              популярные и востребованные модели оборудования, как правило,
+              хранятся на складе. Также у нас имеется магазин. Наши специалисты продемонстрируют оборудование в работе и
+              помогут подобрать нужную модель. Парк машин
+              регулярно пополняется новинками. Также в ассортименте имеются комплектующие и запасные детали для самого
+              разного производственного оборудования. Мы
+              гарантируем качество представленного товара. В случае брака выполним обмен или гарантийный ремонт.
+            </div>
+          </div>
+          <button class="button button--dark benefits__description-button" type="button" data-toggle="collapse"
+            data-target="#benefits-collapse" aria-expanded="false" aria-controls="collapseExample">
+            Читать полностью
+          </button>
+
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.benefits -->
+
+  <section class="catalog">
+    <div class="container">
+      <div class="position-relative d-flex flex-wrap justify-content-between align-items-center">
+        <h2 class="title">Cпециальные предложения</h2>
+        <div class="d-flex align-items-center">
+          <div class="mr-3 position-static swiper-button-prev arrow-prev catalog__swiper-button-prev"></div>
+          <div class="position-static swiper-pagination pagination catalog__swiper-pagination"></div>
+          <div class="ml-3 position-static swiper-button-next arrow-next catalog__swiper-button-next"></div>
+        </div>
+      </div>
+
+      <div class="swiper-container catalog__swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+
+    <div class="container mt-4">
+      <div class="position-relative d-flex flex-wrap justify-content-between align-items-center">
+        <h2 class="title">Популярные товары</h2>
+        <div class="d-flex align-items-center">
+          <div class="mr-3 position-static swiper-button-prev arrow-prev catalog2__swiper-button-prev"></div>
+          <div class="position-static swiper-pagination pagination catalog2__swiper-pagination"></div>
+          <div class="ml-3 position-static swiper-button-next arrow-next catalog2__swiper-button-next"></div>
+        </div>
+      </div>
+
+      <div class="swiper-container catalog2__swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="catalog__card">
+              <div class="catalog__card-img"><img src="img/catalog/catalog-img.png" alt="img"></div>
+              <h4 class="catalog__card-name">МКО-02 контейнер
+                для ТБО</h4>
+              <div class="d-flex align-items-center">
+                <strong class="catalog__card-newPrice">2976 руб</strong>
+                <span class="catalog__card-oldPrice">2976 руб</span>
+              </div>
+              <button class="button button--transparent catalog__card-button">Добавить в корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.catalog -->
+
+  <section class="contacts">
+    <div class="container">
+      <h2 class="title">Свяжитесь с нами</h2>
+      <p class="description">Вы можете оставить нам Ваши контактные данные и наши менеджеры свяжутся с Вами по вопросам
+        покупки товаров
+        или изготовления изделий из металла на заказ.</p>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 mb-4">
+          <div id="mapid"></div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="d-flex align-items-center contacts__item">
+            <img class="contacts__icon" src="img/contacts/location-icon.svg" alt="location">
+            <h3 class="contacts__header">Офис продаж «Альфа-Трейдинг» располагается
+              по адресу: г. Новокузнецк, ул. Слесарная, 7а, к3</h3>
+          </div>
+          <div class="d-flex align-items-start contacts__item">
+            <img class="contacts__icon" src="img/contacts/location-icon.svg" alt="location">
+            <div>
+              <h3 class="contacts__header">
+                <a href="tel:+88005508106">
+                  8 (800) 550-81-06;
+                </a>
+                <a href="tel:+73843209141">
+                  +7 (3843) 20-91-41;
+                </a>
+                <a href="tel:+79627341141">
+                  +7 (962) 734-11-41
+                </a>
+              </h3>
+
+              <p class="contacts__subheader">Время работы: пн-сб / 8:00-17:00</h3>
+
+            </div>
+          </div>
+          <div class="d-flex align-items-center contacts__item">
+            <img class="contacts__icon" src="img/contacts/location-icon.svg" alt="location">
+            <a href="mailto:alfa@alfa-nk.ru" class="contacts__header">alfa@alfa-nk.ru</a>
+          </div>
+          <div class="d-flex align-items-center contacts__item">
+            <img class="contacts__icon" src="img/contacts/location-icon.svg" alt="location">
+            <a href="instagram.com/alfa_nvk" class="contacts__header">instagram.com/alfa_nvk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 d-flex align-items-center justify-content-center">
+      <h3 class="contacts__message">
+        Заполните простую форму и мы Вам перезвоним!
+      </h3>
+      <button class="button button--primary contacts__button">Заполнить заявку!</button>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.contacts -->
+
+  <footer class="footer">
+    <div class="container">
+
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.footer -->
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- leaflet -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

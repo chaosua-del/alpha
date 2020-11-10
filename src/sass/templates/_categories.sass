@@ -1,0 +1,45 @@
+.categories
+  .swiper-slide
+    width: 280px !important
+    margin-right: 15px
+  .swiper-button
+    &-next, &-prev
+      // content: '' !important
+      top: 66%
+      width: 28px !important
+      height: 28px !important
+      box-shadow: 3px 4px 9px rgba(0, 0, 0, 0.16)
+      background-color: #FFFFFF !important
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      background: url(../img/categories/arrow-prev.svg) no-repeat center
+      opacity: 1 !important
+      &::after
+        content: ''
+    &-next
+      transform: rotate(180deg)
+      right: -2%
+    &-prev
+      left: -2%
+
+  &__card
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+    justify-content: space-between
+    background-color: #f7f7f7
+    height: 130px
+    padding-left: 31px
+    padding-right: 11px
+    &-title
+      // left: 20px
+      max-width: 160px
+      align-self: center
+      font-size: 1.142rem
+      font-weight: 700
+      flex-basis: 50%
+    &-img
+      position: absolute
+      right: 11px
