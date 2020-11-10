@@ -1,0 +1,125 @@
+@import '../files/variables'
+
+html
+  font-size: 14px
+
+body
+  color: $dark-color
+  font-family: 'Gotham Pro', sans-serif
+  // overflow-x: hidden
+
+a
+  color: $dark-color
+
+button
+  border: none
+  background: transparent
+
+input
+  border: none
+  background-color: transparent
+
+img
+  max-width: 100%
+
+section
+  padding-bottom: 100px
+
+.button
+  color: #222222
+  border-radius: 5px
+  &--primary
+    background-color: $accent-color
+  &--transparent
+    background-color: transparent
+    border: 1px solid #303030
+  &--dark
+    background-color: #0d0d0d
+    color: #FFFFFF
+
+.searchbar
+  background-color: $blue-color
+  width: 338px
+  height: 38px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 15px
+  &__input
+    width: 90%
+    height: 100%
+    outline: none
+
+.carousel-indicators
+  li
+    border-radius: 50% !important
+    width: 5px !important
+    height: 5px !important
+    background-color: #fff
+    opacity: 1 !important
+    position: relative
+    margin-right: 17px !important
+    // transition: width 0.4s ease-in-out, height 0.4s ease-in-out
+  .active
+    width: 11px !important
+    height: 11px !important
+    background-color: transparent
+    border: 1px solid #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    &::after
+      content: ''
+      width: 5px
+      height: 5px
+      background-color: #ffffff
+      border-radius: 50%
+
+.title
+  color: #000000
+  font-family: "Gotham Pro"
+  font-size: 2.43rem
+  font-weight: 700
+  margin-bottom: 40px
+
+.description
+  olor: #242424
+  font-size: 1.142rem
+  font-weight: 300
+
+.arrow-next, .arrow-prev
+  width: 25px !important
+  height: 25px !important
+  border: 1px solid #303030
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out
+  &::after
+    content: ''
+    border: solid black
+    border-width: 0 2px 2px 0
+    display: inline-block
+    padding: 2px
+    transition: border-color 0.2s ease-in-out
+  &:hover
+    border-color: #1e1e1e
+    background-color: #1e1e1e
+    &::after
+      border-color: #FFFFFF
+.arrow-next
+  &::after
+    transform: rotate(-45deg)
+.arrow-prev
+  &::after
+    transform: rotate(135deg)
+
+.pagination
+  margin-bottom: 21px
+  .swiper-pagination-bullet
+    width: 5px
+    height: 5px
+    background-color: #000000
+    margin-right: 5px
+    margin-left: 5px
