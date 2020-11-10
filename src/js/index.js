@@ -54,6 +54,9 @@ $(document).ready(function () {
     accessToken: 'pk.eyJ1IjoiY2hhb3N1YS1kZWwiLCJhIjoiY2tkbjBqY3dqMGlmaDJxcW4xbnljb2V1aiJ9.lKJeJfZMCU8J2h9G8aMbVg'
 }).addTo(mymap);
 
-
+// scroll to top
+$('.footer__arrow-up').on('click', () => {
+  $('html').animate({ scrollTop: 0 }, 'slow');  
+});
   
 });

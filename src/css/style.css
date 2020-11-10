@@ -635,8 +635,22 @@ section {
   color: #ffde00 !important;
 }
 
+.footer__social-instagram {
+  width: 16px;
+  height: 16px;
+  margin-right: 11px;
+}
+
 .footer__row {
   border-bottom: 1px solid #656e7f;
+  position: relative;
+}
+
+.footer__arrow-up {
+  position: absolute;
+  right: -50px;
+  bottom: -8px;
+  cursor: pointer;
 }
 
 .footer__button {
@@ -656,6 +670,10 @@ section {
   .filter__item {
     margin-right: 17px;
     margin-bottom: 20px;
+  }
+  .footer__arrow-up {
+    right: 10px;
+    bottom: 5px;
   }
 }
 
