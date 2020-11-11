@@ -14,11 +14,8 @@
     width: 365px
     height: 106px
     background-color: #f5f4f0
-    // background-color: red
+    cursor: pointer
     display: flex
-    // flex-wrap: wrap
-    // justify-content: center
-    // text-align: center
     align-items: center
     margin-bottom: 37px
     transition: box-shadow 0.2s ease-in-out
@@ -33,5 +30,42 @@
       color: #121212
     &:hover
       box-shadow: 0 0 27px rgba(0, 0, 0, 0.15)
+      text-decoration: none
+
+.benefits
+  &__card
+    display: flex
+    flex-wrap: wrap
+    border: 1px solid #737373
+    border-radius: 5px
+    padding-left: 27px
+    padding-top: 24px
+    align-items: baseline
+    margin-bottom: 20px
+    &-title
+      font-size: 2.5rem
+    &-img
+      margin-right: 34px
+  &__list
+    padding-left: 0
+    &-item
+      list-style: none
+      font-size: 1.1rem
+      line-height: 2.5rem
+      a
+        color: #3e59f9
+  &__description
+    padding: 5px
+    &-text
+      color: #181818
+      font-family: "ArialMT"
+      font-size: 15px
+    &-button
+      margin-top: 36px
+      padding: 14px 27px
+      margin-left: auto
+      margin-right: auto
+      display: block
 
 @import 'media/media'
+@import 'media/production-media'

@@ -60,7 +60,7 @@ img {
 }
 
 section {
-  padding-bottom: 100px;
+  padding-bottom: 5rem;
 }
 
 .button {
@@ -465,6 +465,7 @@ header {
   width: 365px;
   height: 106px;
   background-color: #f5f4f0;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,6 +498,63 @@ header {
 .production__card:hover {
   -webkit-box-shadow: 0 0 27px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 27px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.benefits__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid #737373;
+  border-radius: 5px;
+  padding-left: 27px;
+  padding-top: 24px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.benefits__card-title {
+  font-size: 2.5rem;
+}
+
+.benefits__card-img {
+  margin-right: 34px;
+}
+
+.benefits__list {
+  padding-left: 0;
+}
+
+.benefits__list-item {
+  list-style: none;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+}
+
+.benefits__list-item a {
+  color: #3e59f9;
+}
+
+.benefits__description {
+  padding: 5px;
+}
+
+.benefits__description-text {
+  color: #181818;
+  font-family: "ArialMT";
+  font-size: 15px;
+}
+
+.benefits__description-button {
+  margin-top: 36px;
+  padding: 14px 27px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 @media (max-width: 1200px) {
@@ -550,6 +608,24 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .benefits__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+  .benefits__card-img {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=produciton.css.map */
