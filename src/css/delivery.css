@@ -413,6 +413,10 @@ header {
   line-height: 2.2rem;
 }
 
+.footer__list li {
+  list-style: none;
+}
+
 .footer__list-item {
   list-style: none;
   display: -webkit-box;
