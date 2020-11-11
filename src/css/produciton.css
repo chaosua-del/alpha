@@ -143,13 +143,19 @@ section {
   font-family: "Gotham Pro";
   font-size: 2.43rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
 }
 
 .subtitle {
   font-family: 'ArialMT';
   font-size: 1.1rem;
   color: #181818;
+}
+
+.subheader {
+  color: #1d1d1d;
+  font-size: 1.142rem;
+  font-weight: 300;
 }
 
 .description {

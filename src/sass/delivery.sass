@@ -1,0 +1,99 @@
+@import 'files/fonts'
+@import 'files/interface'
+@import 'files/variables'
+
+@import 'templates/header'
+@import 'templates/contacts'
+@import 'templates/footer'
+
+.delivery
+  &__button
+    padding: 16px 53px
+    margin-left: auto
+    margin-right: auto
+    display: block
+  &__hero
+    background: url('../img/delivery/delivery-bg.png') no-repeat center / cover
+  &__card
+    max-width: 1200px
+    padding: 2rem
+    background-color: #f7f7f7
+    margin-bottom: 55px
+    &-text
+      color: #1d1d1d
+      font-weight: 300
+      font-size: 1.142rem
+      margin-bottom: 39px
+      &:nth-child(2)
+        margin-bottom: 0
+    &-phone
+      font-weight: 500
+  &__dash
+    width: 10px
+    height: 1px
+    background-color: #595959
+    display: block
+  &__select, &__input
+    width: 320px
+    height: 50px
+  &__select
+    margin-bottom: 35px
+  &__input
+    padding-left: 40px
+  &__inputWrap
+    position: relative
+    &::before
+      content: ''
+      width: 16px
+      height: 20px
+      position: absolute
+      top: 51%
+      transform: translateY(-50%)
+      left: 15px
+      background: url('../img/delivery/location-icon.svg') no-repeat center / contain
+
+  &__label
+    margin-top: 13px
+    color: #2b2b2b
+    font-weight: 300
+    margin-bottom: 30px
+  &__input::placeholder, &__select, &__input2
+    color: #2b2b2b
+    font-weight: 300
+
+  &__select
+    option
+      color: #2b2b2b
+      font-weight: 300
+      font-size: 1rem
+  &__select2
+    width: 275px
+    margin-bottom: 30px
+  &__input2
+    height: 50px
+    width: 265px
+    margin-bottom: 30px
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before
+  background-color: #252525
+
+.custom-checkbox .custom-control-input:active ~ .custom-control-label::before
+  background-color: transparent
+
+.calculator
+  padding: 65px 0
+  background-color: #f7f7f7
+
+.companies
+  &__card
+    width: 370px
+    height: 98px
+    box-shadow: 4px 6px 16px rgba(0, 0, 0, 0.06)
+    background-color: #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 30px
+
+@import 'media/media'
+@import 'media/delivery-media'
