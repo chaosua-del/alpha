@@ -1,0 +1,42 @@
+@import 'files/fonts'
+@import 'files/interface'
+@import 'files/variables'
+
+@import 'templates/header'
+@import 'templates/hero'
+@import 'templates/contacts'
+@import 'templates/footer'
+
+.services__hero
+  background: url('../img/services-hero.png') no-repeat center / cover
+  height: 350px
+  max-width: 1920px
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  align-items: center
+  padding-bottom: 0
+  .hero__header
+    max-width: 540px
+
+.services
+  padding-bottom: 50px
+  &__card
+    width: 360px
+    height: 210px
+    background-color: #f4f3ee
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-bottom: 27px
+    &-img
+      margin-bottom: 41px
+    &-description
+      margin-bottom: 0
+      text-align: center
+      max-width: 190px
+      font-size: 1.142rem
+      font-weight: 500
+
+@import 'media/media'
