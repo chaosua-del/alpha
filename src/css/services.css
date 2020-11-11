@@ -249,6 +249,25 @@ header {
   padding-bottom: 10px;
 }
 
+.mainHero {
+  height: 350px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 0;
+}
+
+.mainHero__header {
+  max-width: 540px;
+  color: #FFFFFF;
+}
+
 .header__text {
   font-family: 'Gotham Pro';
   font-weight: 300;
@@ -586,6 +605,15 @@ header {
   }
   .categories .swiper-button-prev {
     left: 5px;
+  }
+  .production__card-img {
+    width: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=services.css.map */
