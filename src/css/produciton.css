@@ -477,6 +477,7 @@ header {
   transition: -webkit-box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  padding-right: 15px;
 }
 
 .production__card-img {
