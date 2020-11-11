@@ -151,10 +151,20 @@ section {
   color: #181818;
 }
 
+.header {
+  color: #000000;
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+
 .subheader {
   color: #1d1d1d;
   font-size: 1.142rem;
   font-weight: 300;
+}
+
+.subheader__link {
+  text-decoration: underline;
 }
 
 .description {
@@ -272,6 +282,32 @@ header {
 .mainHero__header {
   max-width: 540px;
   color: #FFFFFF;
+}
+
+.form__input {
+  color: #505050;
+  font-weight: 300;
+  background-color: #f9f9f9;
+  outline: none;
+}
+
+.form__dash {
+  width: 20px;
+  height: 2px;
+  background-color: #1d1d1d;
+}
+
+.form__label {
+  color: #2b2b2b;
+  font-weight: 300;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #252525;
+}
+
+.custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+  background-color: transparent;
 }
 
 .header__text {
