@@ -326,6 +326,90 @@ header {
   background-color: transparent;
 }
 
+.info {
+  color: #121212;
+  font-weight: 300;
+}
+
+.info__title {
+  color: #121212;
+  font-size: 2.142rem;
+  font-weight: 700;
+}
+
+.info__article {
+  color: #5a5a5a;
+  font-weight: 500;
+  background-color: #f9f9f9;
+  padding: 12px 15px;
+  display: inline-block;
+}
+
+.info__header {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 23px;
+}
+
+.info__list {
+  padding-left: 0;
+  padding-bottom: 27px;
+  border-bottom: 1px solid  #eaeaea;
+}
+
+.info__list-item {
+  list-style: none;
+}
+
+.info__list-item::before {
+  content: '';
+  display: inline-block;
+  margin-right: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ff1c23;
+}
+
+.info__newPrice {
+  font-weight: 500;
+  font-size: 2.78rem;
+  color: #ff1c23;
+}
+
+.info__oldPrice {
+  color: #7b7b7b;
+  font-weight: 500;
+  font-size: 1.42rem;
+  text-decoration: line-through;
+}
+
+.info__counter {
+  font-size: 1.142rem;
+  font-weight: 300;
+}
+
+.info__counter-button {
+  font-size: 1.142rem;
+  font-weight: 300;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  width: 26px;
+  height: 26px;
+}
+
+.info__button {
+  padding: 14.5px 20px;
+  margin-right: 21px;
+}
+
+.info__link {
+  text-decoration: underline;
+  color: #0c48f3;
+  font-weight: 500;
+  margin-right: 28px;
+}
+
 .header__text {
   font-family: 'Gotham Pro';
   font-weight: 300;
@@ -660,6 +744,13 @@ header {
   .services__card {
     margin-right: 20px;
   }
+  .info__button {
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+  .info__button:nth-last-child(1) {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 992px) {
@@ -669,6 +760,25 @@ header {
   }
   .categories .swiper-container {
     margin-right: -50%;
+  }
+  .catalogCard .gallery-top {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .catalogCard .gallery-top .swiper-wrapper {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    width: 600px;
+  }
+  .catalogCard .gallery-top .swiper-slide {
+    height: 300px;
+    height: 300px;
+  }
+  .catalogCard .gallery-thumbs .swiper-slide {
+    width: 75px;
+    height: 75px;
   }
 }
 

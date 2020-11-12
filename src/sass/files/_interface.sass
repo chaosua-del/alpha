@@ -207,3 +207,63 @@ header
 
 .custom-checkbox .custom-control-input:active ~ .custom-control-label::before
   background-color: transparent
+
+//info
+.info
+  color: #121212
+  font-weight: 300
+  &__title
+    color: #121212
+    font-size: 2.142rem
+    font-weight: 700
+  &__article
+    color: #5a5a5a
+    font-weight: 500
+    background-color: #f9f9f9
+    padding: 12px 15px
+    display: inline-block
+  &__header
+    font-weight: 700
+    font-size: 1rem
+    margin-bottom: 23px
+  &__list
+    padding-left: 0
+    padding-bottom: 27px
+    border-bottom: 1px solid  #eaeaea
+    &-item
+      list-style: none
+      &::before
+        content: ''
+        display: inline-block
+        margin-right: 8px
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background-color: $red-color
+  &__newPrice
+    font-weight: 500
+    font-size: 2.78rem
+    color: $red-color
+  &__oldPrice
+    color: #7b7b7b
+    font-weight: 500
+    font-size: 1.42rem
+    text-decoration: line-through
+  &__counter
+    font-size: 1.142rem
+    font-weight: 300
+    &-button
+      font-size: 1.142rem
+      font-weight: 300
+      background-color: #f9f9f9
+      border-radius: 5px
+      width: 26px
+      height: 26px
+  &__button
+    padding: 14.5px 20px
+    margin-right: 21px
+  &__link
+    text-decoration: underline
+    color: #0c48f3
+    font-weight: 500
+    margin-right: 28px

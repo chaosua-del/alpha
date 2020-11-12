@@ -11,6 +11,13 @@
     &__card
       margin-right: 20px
 
+  .info
+    &__button
+      font-size: 0.8rem
+      margin-right: 10px
+      &:nth-last-child(1)
+        margin-right: 0
+
 @media(max-width: 992px)
   .categories
     width: 100%
@@ -18,6 +25,23 @@
     .swiper-container
       // right: -50%
       margin-right: -50%
+
+  .catalogCard
+    .gallery-top
+      width: 300px
+      height: 300px
+      overflow: hidden
+      .swiper-wrapper
+        display: flex !important
+        width: 600px
+      .swiper-slide
+        height: 300px
+        height: 300px
+
+    .gallery-thumbs
+      .swiper-slide
+        width: 75px
+        height: 75px
 
 @media(max-width: 768px)
   html
