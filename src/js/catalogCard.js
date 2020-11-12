@@ -19,24 +19,26 @@ $(document).ready(function () {
   const plus = $('.info__plus');
   const minus = $('.info__minus')
   const value = $('.info__counter-number');
-  let i = 1;
+  
 
   plus.on('click', () => {
+    let i = parseInt(value.val())
     i++;
     if(i>9)
-    value.text(`${i}`);
+    value.val(`${i}`);
     else
-    value.text(`0${i}`);
+    value.val(`0${i}`);
   });
 
   minus.on('click', () => {
+    let i = parseInt(value.val())
     if(i > 1 && i < 10) {
       i--;
-      value.text(`0${i}`);
+      value.val(`0${i}`);
     }
     else if(i > 9) {
       i--;
-      value.text(`${i}`);
+      value.val(`${i}`);
     }
     else
     return;

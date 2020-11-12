@@ -1,0 +1,59 @@
+@import 'files/fonts'
+@import 'files/interface'
+@import 'files/variables'
+
+@import 'templates/header'
+@import 'templates/hero'
+@import 'templates/contacts'
+@import 'templates/footer'
+
+.tbo
+  &__hero
+    background: url('../img/tbo-bg.png') no-repeat center / cover
+  &__wrap
+    width: 158px
+    margin-right: 1rem
+  &__block
+    padding-bottom: 15px
+    border-bottom: 1px solid #eaeaea
+    margin-bottom: 19px
+  &__text
+    font-size: 0.85rem
+    font-weight: 300
+  &__price
+    color: $red-color
+    font-weight: 500
+  &__description
+    font-family: "Arial MT"
+    font-size: 1.1rem
+    color: #181818
+  &__button
+    padding: 15.5px 23px
+  .info__header
+    margin-bottom: 9px
+  .info__title
+    margin-bottom: 30px
+    max-width: 554px
+  .info__link
+    margin-right: 0
+  .gallery-thumbs
+    .swiper-slide
+      width: 108px
+      height: 108px
+      display: flex
+      opacity: 0.4
+    .swiper-slide-thumb-active
+      opacity: 1
+      img
+        object-fit: cover
+    .swiper-wrapper
+      transform: translate3d(0, 0, 0) !important
+  .gallery-top
+    .swiper-slide
+      width: 480px !important
+      height: 480px !important
+    .swiper-wrapper
+      width: 480px !important
+
+@import 'media/media'
+@import 'media/tbo-media'
