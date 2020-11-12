@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скидки</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../css/discounts.css">
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-light">
+      <div class="container d-flex justify-content-between align-items-center ">
+        <a href="index.html" class="header__logo navbar-brand"><img src="../img/header/header-logo.svg"
+            alt="Альфа Трейдинг"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex-lg justify-content-between align-items-center pt-lg-3 pt-xl-0"
+          id="navbarTogglerDemo02">
+          <form class="form-inline my-2 my-xl-0">
+            <div class="searchbar d-flex flex-wrap">
+              <input type="text" class="searchbar__input" placeholder="Поиск">
+              <button type="submit" class="searchbar__button">
+                <img src="../img/header/search-icon.svg" alt="Поиск">
+              </button>
+            </div>
+          </form>
+          <ul class="navbar-nav mt-2 mt-xl-0">
+            <li class="header__block d-flex flex-wrap pt-2 mr-3">
+              <div class="bucket-icon"><img src="../img/header/buy-icon.svg" alt="Корзина"></div>
+              <div class="ml-3">
+                <p class="header__text mb-0">Корзина</p>
+                <p class="header__price">18 000руб</p>
+              </div>
+            </li>
+
+            <li class="header__block d-flex pt-2">
+              <div class="phone-icon"><img src="../img/header/phone-icon.svg" alt="Корзина"></div>
+              <div class="ml-3 text-right">
+                <a href="tel:88005508106" class="header__phone d-block">8 (800) 550-81-06</a>
+                <p class="header__text">Звонок бесплатный</p>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- ./nav -->
+
+    <div class="filter">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col p-sm-0 d-flex justify-content-start justify-content-xl-between align-items-center flex-wrap">
+            <div class="position-relative filter__item">
+              <button class="btn button--primary header__burger" type="button" data-toggle="collapse"
+                data-target="#header-burger" aria-expanded="false" aria-controls="header-burger">
+                Каталог продукции
+              </button>
+              <div class="collapse position-absolute" id="header-burger">
+                <div class="card card-body filter__expand">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                  anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown d-flex align-items-start filter__item">
+              <img src="../img/header/prodction-icon.svg" alt="prod">
+              <button class="dropdown-toggle" type="button" id="production" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Производство
+              </button>
+              <div class="dropdown-menu" aria-labelledby="production">
+                <button class="dropdown-item" type="button">Action</button>
+                <button class="dropdown-item" type="button">Another action</button>
+                <button class="dropdown-item" type="button">Something else here</button>
+              </div>
+            </div>
+
+            <div class="dropdown d-flex align-items-start filter__item">
+              <img src="../img/header/services-icon.svg" alt="services">
+              <button class="dropdown-toggle" type="button" id="services" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Услуги
+              </button>
+              <div class="dropdown-menu" aria-labelledby="services">
+                <button class="dropdown-item" type="button">Action</button>
+                <button class="dropdown-item" type="button">Another action</button>
+                <button class="dropdown-item" type="button">Something else here</button>
+              </div>
+            </div>
+
+            <a href="#" class="d-flex align-items-start filter__item">
+              <img class="mr-2" src="../img/header/discounts-icon.svg" alt="discounts">
+              <p class="mb-0">Скидки</p>
+            </a>
+
+            <a href="#" class="filter__item">
+              Контакты
+            </a>
+
+            <div class="dropdown d-flex align-items-start filter__item">
+              <button class="dropdown-toggle" type="button" id="production-btn" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                О компании
+              </button>
+              <div class="dropdown-menu" aria-labelledby="production-btn">
+                <button class="dropdown-item" type="button">Action</button>
+                <button class="dropdown-item" type="button">Another action</button>
+                <button class="dropdown-item" type="button">Something else here</button>
+              </div>
+            </div>
+
+            <a href="#" class="filter__item">
+              Доставка
+            </a>
+
+            <a href="#" class="filter__item">
+              Кредит
+            </a>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.filter -->
+    </div>
+  </header>
+
+  <section class="mainHero discounts__hero">
+    <div class="container">
+      <h1 class="mainHero__header">Скидки</h1>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.hero -->
+
+  <section class="current">
+    <div class="container">
+      <div class="d-flex">
+        <a href="../index.html" class="current__link current__link--unactive">Главная</a><span
+          class="current__slash">/</span>
+        <a href="../index.html" class="current__link current__link--unactive">Каталог</a><span
+          class="current__slash">/</span>
+        <a href="../index.html" class="current__link current__link--active">Страница 1</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="discounts">
+    <div class="container">
+      <div class="discounts__card">
+        <div class="d-flex flex-column discounts__card-block justify-content-center align-items-center">
+          <span class="discounts__card-label">Скидка
+            на все
+            двери </span>
+          <strong class="discounts__card-percentage"> 7%</strong>
+        </div>
+
+        <div>
+          <h3 class="discounts__card-title">Внимание! Скидка на все двери 7%</h3>
+          <span class="discounts__card-subtitle">20.09.2020</span>
+          <p class="discounts__card-text">Для получения скидки укажите промокод: "Альфа Двери"</p>
+          <button class="button button--primary discounts__card-button">Каталог дверей</button>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.discounts -->
+
+
+  <div class="callback mt-4 d-flex flex-wrap align-items-center justify-content-center px-3">
+    <h3 class="contacts__message mr-3 text-center text-lg-left mb-0">
+      Заполните простую форму и мы Вам перезвоним!
+    </h3>
+    <div class="mb-2 invisible w-100">a</div>
+    <button class="button button--primary contacts__button">Заполнить заявку!</button>
+  </div>
+
+  <footer class="footer pb-4">
+    <div class="container">
+      <div class="row footer__row">
+        <div class="col-8 d-flex flex-wrap justify-content-lg-between justify-content-center p-lg-0 mx-auto mx-lg-0 ">
+          <div class="mb-4 mr-4 mr-lg-0">
+            <h3 class="footer__header">Меню</h3>
+            <ul class="footer__list ">
+              <li class="footer__list-item"><a href="#">Информация по кредиту</a></li>
+              <li class="footer__list-item"><a href="#">Скидки</a></li>
+              <li class="footer__list-item"><a href="#">О компании</a></li>
+              <li class="footer__list-item"><a href="#">Статьи</a></li>
+              <li class="footer__list-item"><a href="#">Доставка</a></li>
+              <li class="footer__list-item"><a href="#">Оформление заказа</a></li>
+              <li> <button type="button" class="footer__button">Смотреть весь список</button></li>
+            </ul>
+          </div>
+          <div class="mb-4">
+            <h3 class="footer__header">Каталог продукции</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#">Тумбочки и тележки</a></li>
+              <li class="footer__list-item"><a href="#">Шкафы производственные</a></li>
+              <li class="footer__list-item"><a href="#">Тара и контейнеры</a></li>
+              <li class="footer__list-item"><a href="#">Столы производственные</a></li>
+              <li class="footer__list-item"><a href="#">Складское оборудование</a></li>
+              <li class="footer__list-item"><a href="#">Скамьи гардеробные</a></li>
+              <li> <button type="button" class="footer__button">Смотреть весь список</button></li>
+            </ul>
+          </div>
+          <div class="mb-4">
+            <h3 class="footer__header">Производство</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#">Перфорированные листы</a></li>
+              <li class="footer__list-item"><a href="#">Закладные детали</a></li>
+              <li class="footer__list-item"><a href="#">Изделия из нержавейки</a></li>
+              <li class="footer__list-item"><a href="#">Бункеры для ТБО</a></li>
+              <li class="footer__list-item"><a href="#">Нестандартные изделия</a></li>
+              <li class="footer__list-item"><a href="#">Тара под раствор</a></li>
+              <li> <button type="button" class="footer__button">Смотреть весь список</button></li>
+            </ul>
+          </div>
+        </div>
+        <!-- ./col-8 -->
+
+        <div class="mb-3 col-12 col-lg-4 d-flex flex-column align-items-center align-items-lg-start">
+
+          <h3 class="footer__header">Контакты</h3>
+          <div class="footer__contacts">
+            <a class="footer__contacts-phone" href="tel:+88005508106">8 (800) 550-81-06</a>
+            <div class="footer__contacts-text">
+              <a href="tel:+73843209141">+7 (3843) 20-91-41; </a><a href="tel:+79627341141">+7 (962) 734-11-41</a>
+              <p>Время работы: пн-сб / 8:00-17:00</p>
+            </div>
+            <div class="footer__social">
+              <div>
+                <span>Напишите нам:</span>
+                <a class="footer__social-mail" href="mailto:alfa@alfa-nk.ru">alfa@alfa-nk.ru</a>
+                <div class="mt-2 d-flex align-items-center">
+                  <img class="footer__social-instagram" src="../img/instagram-icon.svg" alt="instagram">
+                  <a href="instagram.com/alfa_nvk">instagram.com/alfa_nvk</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="footer__arrow-up">
+          <img src="../img/arrow-up.svg" alt="arrow-up">
+        </div>
+      </div>
+      <p class="footer__policy">© 2020 Производственная компания «Альфа-Трейдинг». Кемеровская область, г. Новокузнецк,
+        ул. Слесарная, 7а, к3</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.footer -->
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+
+  <script src="../js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+@import 'files/fonts'
+@import 'files/interface'
+@import 'files/variables'
+
+@import 'templates/header'
+@import 'templates/hero'
+@import 'templates/contacts'
+@import 'templates/footer'
+
+.discounts
+  &__hero
+    background: url('../img/discounts-bg.png') no-repeat center / cover
+  &__card
+    color: #1d1d1d
+    background-color: #f7f7f7
+    display: flex
+    &-block
+      width: 276px
+    &-label
+      font-size: 1.285rem
+      font-weight: 500
+      max-width: 66px
+      text-align: center
+    &-percentage
+      font-size: 2.57rem
+    &-title
+      font-size: 2.28rem
+    &-subtitle, &-text
+      color: #cacaca
+      font-size: 1.142rem
+      font-weight: 300
+      margin-bottom: 14px
+    &-text
+      color: #1d1d1d
+    &-button
+      padding: 19.5px 44px
+
+@import 'media/media'

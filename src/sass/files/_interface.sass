@@ -172,9 +172,21 @@ header
   display: flex
   align-items: center
   padding-bottom: 0
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-color: rgba(#000000, 0.4)
   &__header
     max-width: 540px
     color: #FFFFFF
+    text-transform: uppercase
+  .container
+    z-index: 100
 
 .form
   &__input
