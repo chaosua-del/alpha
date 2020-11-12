@@ -1,0 +1,28 @@
+@media screen and ( max-width: 992px )
+  .discounts
+    &__card
+      padding-bottom: 40px
+      padding-left: 20px
+      padding-right: 20px
+      position: relative
+      &::after, &::before
+        content: ''
+        position: absolute
+        top: 0
+        width: 32px
+        height: 100%
+        background: url('../img/card-decoration2.svg') space repeat
+      &::after
+        right: -16px
+      &::before
+        left: -16px
+
+      &-block, &-wrap
+        width: 100%
+        align-items: center
+        text-align: center
+        &::after
+          display: none
+
+      &-label
+        max-width: none

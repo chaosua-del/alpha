@@ -14,13 +14,37 @@
     color: #1d1d1d
     background-color: #f7f7f7
     display: flex
+    position: relative
+    flex-wrap: wrap
+    margin-bottom: 32px
+    &::after
+      content: ''
+      position: absolute
+      overflow: hidden
+      top: 0
+      right: -16px
+      width: 32px
+      height: 100%
+      background: url('../img/card-decoration.svg') no-repeat
     &-block
-      width: 276px
+      width: 246px
+      padding-top: 46px
+      padding-bottom: 45px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 32px
+        height: 100%
+        background: url('../img/card-decoration.svg') repeat-y
     &-label
       font-size: 1.285rem
       font-weight: 500
       max-width: 66px
       text-align: center
+      margin-bottom: 18px
     &-percentage
       font-size: 2.57rem
     &-title
@@ -34,5 +58,7 @@
       color: #1d1d1d
     &-button
       padding: 19.5px 44px
+      width: fit-content
 
 @import 'media/media'
+@import 'media/discounts-media'

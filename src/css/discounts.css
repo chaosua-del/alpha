@@ -580,10 +580,38 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.discounts__card::after {
+  content: '';
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: -16px;
+  width: 32px;
+  height: 100%;
+  background: url("../img/card-decoration.svg") no-repeat;
 }
 
 .discounts__card-block {
-  width: 276px;
+  width: 246px;
+  padding-top: 46px;
+  padding-bottom: 45px;
+  position: relative;
+}
+
+.discounts__card-block::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 100%;
+  background: url("../img/card-decoration.svg") repeat-y;
 }
 
 .discounts__card-label {
@@ -591,6 +619,7 @@ header {
   font-weight: 500;
   max-width: 66px;
   text-align: center;
+  margin-bottom: 18px;
 }
 
 .discounts__card-percentage {
@@ -614,6 +643,9 @@ header {
 
 .discounts__card-button {
   padding: 19.5px 44px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media (max-width: 1200px) {
@@ -667,6 +699,42 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .discounts__card {
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+  }
+  .discounts__card::after, .discounts__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 32px;
+    height: 100%;
+    background: url("../img/card-decoration2.svg") space repeat;
+  }
+  .discounts__card::after {
+    right: -16px;
+  }
+  .discounts__card::before {
+    left: -16px;
+  }
+  .discounts__card-block, .discounts__card-wrap {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .discounts__card-block::after, .discounts__card-wrap::after {
+    display: none;
+  }
+  .discounts__card-label {
+    max-width: none;
   }
 }
 /*# sourceMappingURL=discounts.css.map */
