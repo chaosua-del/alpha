@@ -69,3 +69,25 @@
         width: 75px
         display: flex
         align-items: center
+
+  .searchbar
+    width: 250px
+    &__input
+      width: auto
+
+@media screen and ( min-width: 992px )
+  // hovers
+  .button
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out
+    &--dark
+      &:hover
+        box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.2)
+        background-color: #1b1b1b
+    &--transparent
+      &:hover
+        background-color: #ffde00
+        border-color: #ffde00
+    &--primary
+      &:hover, &:focus
+        color: #ffffff
+        background-color: #1b1b1b

@@ -19,7 +19,7 @@
   <header>
     <nav class="navbar navbar-expand-xl navbar-light">
       <div class="container d-flex justify-content-between align-items-center ">
-        <a href="index.html" class="header__logo navbar-brand"><img src="../img/header/header-logo.svg"
+        <a href="../index.html" class="header__logo navbar-brand"><img src="../img/header/header-logo.svg"
             alt="Альфа Трейдинг"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,29 +77,31 @@
               </div>
             </div>
 
-            <div class="dropdown d-flex align-items-start filter__item">
+            <div class="dropdown d-flex align-items-center filter__item">
               <img src="../img/header/prodction-icon.svg" alt="prod">
               <button class="dropdown-toggle" type="button" id="production" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 Производство
               </button>
               <div class="dropdown-menu" aria-labelledby="production">
-                <button class="dropdown-item" type="button">Action</button>
-                <button class="dropdown-item" type="button">Another action</button>
-                <button class="dropdown-item" type="button">Something else here</button>
+                <a href="#" class="dropdown-item" type="button">Action</a>
+                <a href="#" class="dropdown-item" type="button">Another action</a>
+                <a href="#" class="dropdown-item" type="button">Action</a>
+                <a href="#" class="dropdown-item" type="button">Another action</a>
               </div>
             </div>
 
-            <div class="dropdown d-flex align-items-start filter__item">
+            <div class="dropdown d-flex align-items-center filter__item">
               <img src="../img/header/services-icon.svg" alt="services">
               <button class="dropdown-toggle" type="button" id="services" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 Услуги
               </button>
               <div class="dropdown-menu" aria-labelledby="services">
-                <button class="dropdown-item" type="button">Action</button>
-                <button class="dropdown-item" type="button">Another action</button>
-                <button class="dropdown-item" type="button">Something else here</button>
+                <a href="#" class="dropdown-item" type="button">Action</a>
+                <a href="#" class="dropdown-item" type="button">Another action</a>
+                <a href="#" class="dropdown-item" type="button">Action</a>
+                <a href="#" class="dropdown-item" type="button">Another action</a>
               </div>
             </div>
 
@@ -112,15 +114,16 @@
               Контакты
             </a>
 
-            <div class="dropdown d-flex align-items-start filter__item">
-              <button class="dropdown-toggle" type="button" id="production-btn" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown d-flex align-items-center filter__item">
+              <button class="dropdown-toggle" type="button" id="production" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
                 О компании
               </button>
-              <div class="dropdown-menu" aria-labelledby="production-btn">
-                <button class="dropdown-item" type="button">Action</button>
-                <button class="dropdown-item" type="button">Another action</button>
-                <button class="dropdown-item" type="button">Something else here</button>
+              <div class="dropdown-menu" aria-labelledby="production">
+                <a href="#" class="dropdown-item" type="button">Action</a>
+                <a href="#" class="dropdown-item" type="button">Another action</a>
+                <a href="#" class="dropdown-item" type="button">Action</a>
+                <a href="#" class="dropdown-item" type="button">Another action</a>
               </div>
             </div>
 
@@ -138,7 +141,6 @@
         <!-- /.container -->
       </div>
       <!-- /.filter -->
-    </div>
   </header>
 
   <section class="mainHero discounts__hero">
@@ -226,7 +228,8 @@
       Заполните простую форму и мы Вам перезвоним!
     </h3>
     <div class="mb-2 invisible w-100">a</div>
-    <button class="button button--primary contacts__button">Заполнить заявку!</button>
+    <button class="button button--primary contacts__button" data-toggle="modal" data-target="#modal">Заполнить
+      заявку!</button>
   </div>
 
   <footer class="footer pb-4">
@@ -304,6 +307,51 @@
     <!-- /.container -->
   </footer>
   <!-- /.footer -->
+
+
+  <!-- modals -->
+  <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modalWrap">
+          <h2 class="title text-center">Заполните простую
+            форму и мы
+            Вам&nbsp;перезвоним!</h2>
+          <form action="#" class="form">
+            <div class="form-group d-flex flex-column flex-xl-row flex-wrap justify-content-between align-items-center">
+              <input type="text" name="user-name" id="modal-user-name" class="form__input " placeholder="Ваше имя">
+              <input type="email" name="user-email" id="modal-user-email" class="form__input " placeholder="Ваш e-mail">
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input required type="checkbox" class="custom-control-input" id="destination-city-check">
+              <label class="custom-control-label form__label credentals__label" for="destination-city-check">Я согласен
+                на
+                предоставление
+                указанных выше данных*</label>
+            </div>
+            <button type="submit" class="mx-auto d-block mt-5 button button--primary contacts__button">Заполнить
+              заявку!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="success" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="success">
+          <h3 class="success__title"> Мы только что
+            получили ваш запрос.
+            Мы свяжемся с Вами
+            как можно скорее.</h3>
+          <div class="success__img">
+            <img src="../img/success-img.svg" alt="Success">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

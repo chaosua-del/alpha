@@ -30,3 +30,29 @@
   &__expand
     // top: -21px
     z-index: 200
+  .dropdown-toggle
+    transition: 0.2s background-color ease-in-out, 0.2s color ease-in-out
+    border-radius: 5px
+    margin-left: 5px
+    display: flex
+    // justify-content: center
+    align-items: center
+    padding-top: 15px
+    padding-bottom: 15px
+    &:focus
+      background-color: #111111
+      color: #ffffff
+      outline: none
+  .dropdown-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &:hover
+      background-color: #ffde00
+      &:after
+        content: ''
+        border: solid black
+        border-width: 0 2px 2px 0
+        display: inline-block
+        padding: 2px
+        transform: rotate(-45deg)
